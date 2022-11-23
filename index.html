@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker APP</title>
+    <!-- CSS only -->
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/main.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/assets/img/money-bag.png" alt="" width="80" height="80">
+        <h1 class="display-5 fw-bold">Expense Tracker APP</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Gelir gider takibinizi bu sayfa üzerinden yapabilirsiniz.</p>
+          <div class="card">
+            <div class="card-body">
+              <h4 id="total">Toplam bakiye : </h4>
+            </div>
+          </div>
+          <br>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <div class="card">
+                <div class="card-body">
+                  <h5>Gelir Ekle</h5>
+                  <br>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Gelir</label>
+                    <input type="text" class="form-control" id="gelir" placeholder="1000₺">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Gelir açıklaması</label>
+                    <input type="text" class="form-control" id="gelirDesc" placeholder="Gelir açıklaması">
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="gelirEkle()">Ekle</button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5>Gider Ekle</h5>
+                  <br>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Gider</label>
+                    <input type="text" class="form-control" id="gider" placeholder="1000₺">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Gider açıklaması</label>
+                    <input type="text" class="form-control" id="giderDesc" placeholder="Gider açıklaması">
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="giderEkle()" >Ekle</button>
+                </div>
+              </div>
+          </div>
+          <br>
+          <br>
+          <p id="toplamIslem"></p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">İşlem tutarı</th>
+                <th scope="col">Açıklaması</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">İşlem</th>
+                
+
+              </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+          </table>
+        </div>
+      </div>
+</body>
+</html>
